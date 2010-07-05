@@ -1,0 +1,13 @@
+= form_for @telemetry do |f|
+  -if @telemetry.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@telemetry.errors.count, "error")} prohibited this telemetry from being saved:"
+      %ul
+        - @telemetry.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :data
+    = f.text_area :data
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,19 @@
+%h1 Listing telemetries
+
+%table
+  %tr
+    %th Data
+    %th
+    %th
+    %th
+
+  - @telemetries.each do |telemetry|
+    %tr
+      %td= telemetry.data
+      %td= link_to 'Show', telemetry
+      %td= link_to 'Edit', edit_telemetry_path(telemetry)
+      %td= link_to 'Destroy', telemetry, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New telemetry', new_telemetry_path
