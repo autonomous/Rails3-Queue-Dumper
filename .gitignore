@@ -1,6 +1,5 @@
 .bundle
 .DS_Store
-config/datatbase.yml
 db/*.sqlite3
 log/*.log
 tmp/**/*
