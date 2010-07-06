@@ -4,3 +4,5 @@ config/datatbase.yml
 db/*.sqlite3
 log/*.log
 tmp/**/*
+config/database.yml
+config/deploy.rb
