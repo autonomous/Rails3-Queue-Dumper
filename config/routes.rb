@@ -1,9 +1,9 @@
 RailsQueueDumper::Application.routes.draw do |map|
+  
   resources :telemetries
-
-
-  get "consumer/munch"
-
+  
+  post "consumer/munch"
+  root :to => "telemetries#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
